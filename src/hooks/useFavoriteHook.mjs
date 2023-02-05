@@ -2,7 +2,7 @@ import { useQuery, useMutation } from "@tanstack/react-query";
 
 function useFavoriteBooks() {
     return useQuery(["books"], async function() {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/favorites`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/favorites`, {
             method: "GET"
         });
 
@@ -13,7 +13,7 @@ function useFavoriteBooks() {
 
 function useAddFavorite() {
     return useMutation(async function(id) {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/favorites/${id}`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/favorites/${id}`, {
             method: "POST"
         });
 
@@ -24,7 +24,7 @@ function useAddFavorite() {
 
 function useRemoveFavorite() {
     return useMutation(async function(id) {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/favorites/${id}`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/favorites/${id}`, {
             method: "DELETE"
         });
 

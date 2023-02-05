@@ -2,7 +2,7 @@ import { useQuery, useMutation } from "@tanstack/react-query";
 
 function useCartBooks() {
     return useQuery(["books"], async function() {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/cart`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/cart`, {
             method: "GET"
         });
 
@@ -13,7 +13,7 @@ function useCartBooks() {
 
 function useAddToCart() {
     return useMutation(async function(id) {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/cart/${id}`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/cart/${id}`, {
             method: "POST"
         });
 
@@ -24,7 +24,7 @@ function useAddToCart() {
 
 function useRemoveFromCart() {
     return useMutation(async function(id) {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/cart/${id}`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/cart/${id}`, {
             method: "DELETE"
         });
 
@@ -35,7 +35,7 @@ function useRemoveFromCart() {
 
 function useIncreaseQuantity() {
     return useMutation(async function(id) {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/cart/increase/${id}`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/cart/increase/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -52,7 +52,7 @@ function useIncreaseQuantity() {
 
 function useDecreaseQuantity() {
     return useMutation(async function(id) {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/cart/decrease/${id}`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/cart/decrease/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
