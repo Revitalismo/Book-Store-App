@@ -1,0 +1,15 @@
+@tailwind base;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+.container {
+    @apply flex flex-col gap-y-[50px];
+}

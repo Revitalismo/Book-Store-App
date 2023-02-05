@@ -1,0 +1,11 @@
+@tailwind utilities;
+
+.transaction-container {
+    @apply h-[90px] py-[10px] px-[15px] bg-light-primary shadow-default;
+    @apply border-light-secondary border-[1px] border-solid;
+    @apply flex items-center;
+}
+
+.transaction {
+    @apply mx-auto w-full max-w-[600px] flex items-center gap-[10px];
+}
