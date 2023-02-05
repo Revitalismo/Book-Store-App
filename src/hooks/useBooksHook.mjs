@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 
 function useRecomendBooks() {
     return useQuery(["recomend"], async function() {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/recomend`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/recomend`, {
             method: "GET"
         });
 
@@ -17,7 +17,7 @@ function useRecomendBooks() {
 
 function usePopularBooks() {
     return useQuery(["popular"], async function() {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/popular`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/popular`, {
             method: "GET"
         });
 
@@ -32,7 +32,7 @@ function usePopularBooks() {
 
 function useBookDetail(id) {
     return useQuery(["book-detail", id], async function() {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/book/${id}`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/book/${id}`, {
             method: "GET"
         });
         

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 
 export function useSearch(query) {
     return useQuery(["search", query], async function() {
-        const request = new Request(`https://Book-Store-API.achmadjulian2.repl.co/books?q=${query}`, {
+        const request = new Request(`https://book-store-api.achmadjulian2.repl.co/books?q=${query}`, {
             method: "GET"
         });
 
